@@ -1,20 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+body{
+    font-family: 'Inter', sans-serif;;
+
+}
 .nav-select {
     background-color: white;
 }
+
 li {
     list-style: none;
     font-size: 10px;
 }
+
 body {
     box-sizing: border-box;
 }
+
 .hamburger {
-    height: 20px;
+    height: 22px;
     width: 20px;
     cursor: pointer;
     flex-basis: 40%;
-
 }
+
 .bar {
     display: block;
     margin: 5px;
@@ -22,19 +30,22 @@ body {
     width: 12px;
     background-color: black;
 }
+
 .bar:nth-child(even) {
     width: 8px;
 }
 
+
 .nav-menu {
     position: fixed;
     top: 20px;
-    left: -100%;
+    left: 0;
+    z-index: 1;
+    display: none;
 }
 
-.nav-menu.active {
-    left: -3%;
-    z-index: 1;
+.nav-menu.open-nav {
+    display: block;
 }
 
 .nav-select {
@@ -42,19 +53,13 @@ body {
 
 }
 
-ul.nav-menu.active {
+ul.nav-menu.open-nav {
     background-color: white;
     text-decoration: none;
     color: #000000;
 }
 
-nav,
-ul,
-li,
-a {
-    text-decoration: none;
-    color: #000000;
-}
+
 
 .bell {
     position: sticky;
@@ -92,10 +97,11 @@ img.calaries {
     height: 150px;
     width: 150px;
 
+
 }
 
+
 .textInfo {
-    /* border: 1px solid black;*/
     width: 200px;
 }
 
@@ -119,13 +125,11 @@ img.calaries {
     height: 19px;
     left: calc(50% - 59px/2 + 44.5px);
     top: 20px;
-
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
     font-size: 0.6em;
     line-height: 19px;
-
     color: #F7F5FF;
 }
 
@@ -185,8 +189,6 @@ img.calaries {
     font-size: 0.55em;
     line-height: 15px;
     /* identical to box height */
-
-
     color: #F7F5FF;
 
 }
@@ -245,7 +247,13 @@ img.calaries {
     border-style: dashed solid solid;
     margin-bottom: 38px;
 }
+.scale{
+    font-family: 'Inter', sans-serif;
+    font-size: smaller;
+    margin: 5px;
+    color: #F7F5FF;
 
+}
 .avatar {
     position: absolute;
     width: 102px;
@@ -253,11 +261,6 @@ img.calaries {
 
 }
 
-img.avatar {
-    padding: 10px;
-    margin-top: 11px;
-    margin-left: 23px;
-}
 
 .circleimg {
     width: 1.2em;
@@ -285,9 +288,7 @@ img.avatar {
     left: 15px;
 }
 
-.cc {
-    z-index: 1;
-}
+
 
 .section1 {
     position: relative;
@@ -302,19 +303,11 @@ img.avatar {
     height: 10em;
     align-items: center;
     justify-content: space-evenly;
-
-}
-
-.main {
-    height: 50em;
-    border: 1px solid black;
 }
 
 .mainSecond {
-
     margin: 0.3em;
     padding: 0.1em;
-    height: 500px;
 }
 
 #onbtn {
@@ -322,6 +315,23 @@ img.avatar {
     height: 2.5em;
     width: 6em;
     background-color: #6249c5;
+    border: 1px solid #6249C5;
+}
+
+#one {
+    border-radius: 34px;
+    height: 2.5em;
+    width: 6em;
+    background-color: #6249c5;
+    border: 1px solid #6249C5;
+}
+
+#two {
+    border-radius: 34px;
+    height: 2.5em;
+    width: 6em;
+    background-color: #fff;
+    color: #6249C5;
     border: 1px solid #6249C5;
 }
 
@@ -333,11 +343,10 @@ img.avatar {
 }
 
 .hamburger1 {
-    height: 20px;
-    width: 20px;
+    height: 30px;
+    width: 30px;
     cursor: pointer;
     align-self: center;
-
 
 }
 
@@ -352,17 +361,21 @@ img.avatar {
 .firstCards {
     display: flex;
     flex-direction: column;
-    height: 10em;
-    scroll-snap-type: x mandatory;
+}
+
+.firstCards .header {
+    margin: 10px 0;
 }
 
 .three {
     display: flex;
     justify-content: space-between;
-    gap: 3px 7px;
-
-
+    gap: 10px;
+    flex-flow: row;
+    width: auto;
+    flex-wrap: wrap;
 }
+
 
 .seecard {
     position: relative;
@@ -370,9 +383,22 @@ img.avatar {
     cursor: pointer;
 }
 
+.seecardIndi {
+    position: relative;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.seecardgrp {
+    position: relative;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 180px;
+}
+
 .headerText {
-    font-size: small;
-    font-family: 'Inter';
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
     font-weight: bold;
 }
 
@@ -380,24 +406,28 @@ img.avatar {
 
     max-height: 100%;
     max-width: 100%;
+    overflow: scroll;
 }
 
 .text {
     position: absolute;
     top: 78%;
     left: 4%;
-    color: #F7F5FF;
-    font-size: medium;
+    color: #F7F5FF; 
     font-size: 12px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Inter', sans-serif;
 }
 
 .topofpage {
-
-    /* display: flex; */
-    justify-content: center;
-    margin-top: 200px;
-    background-image: linear-gradient(#968bbf 50%, #968bbf);
+  background-color: #C9BFF2;
+  padding: 0.5em;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+}
+.topofpage a{
+    text-decoration: none;
+    color:#F7F5FF;
 }
 
 .insidepage {
@@ -405,11 +435,17 @@ img.avatar {
     align-self: center;
     text-align: center;
 }
+
 /* FOOTER */
 footer {
     background: linear-gradient(158.72deg, #6249C5 14.01%, #49B2C9 134.3%);
     padding: 3em 2em;
     color: white;
+}
+
+.home {
+    text-decoration: none;
+    color: #000000;
 }
 
 #app-footer {
@@ -475,4 +511,119 @@ footer {
     font-size: 0.5em;
     text-align: center;
     padding-top: 2em;
+}
+
+/* MediaQuery */
+
+@media(max-width:1199px) {
+    .information {
+        padding: 50px 0 0;
+        height: auto;
+    }
+
+    .section2 {
+        padding: 10px 0 50px;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+    }
+
+    .circle,
+    .circle1,
+    .circle2 {
+        margin: 0 10px;
+        width: 80px;
+        height: 80px;
+        margin-bottom: 0;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .circleflex {
+        text-align: center;
+    }
+
+    .circleText {
+        position: absolute;
+        font-size: 0.55em;
+        color: #fff;
+        top: auto;
+        bottom: -24px;
+    }
+
+    .image {
+        position: relative;
+        height: auto;
+        width: 120px;
+    }
+
+    .section1 {
+        position: relative;
+        height: 10em;
+        display: flex;
+        justify-content: center;
+    }
+
+    .textInfo {
+        border: none;
+        width: auto;
+    }
+
+    img.calaries {
+        width: auto;
+        height: auto;
+        margin: auto;
+    }
+}
+
+@media(max-width: 767px) {
+    .nav-menu {
+        position: fixed;
+        top: 20px;
+        width: 27%;
+        padding: 20px 10px;
+    }
+
+    .nav-menu li.active a {
+        color: red;
+    }
+
+    .firstCards {
+        display: block;
+    }
+
+    .card-row {
+        overflow-x: auto;
+    }
+
+    .three {
+        display: inline-flex;
+        justify-content: space-between;
+        gap: 10px;
+        width: auto;
+        flex-wrap: inherit;
+        overflow-x: auto;
+    }
+
+    .seecard {
+        position: relative;
+        border-radius: 8px;
+        cursor: pointer;
+        width: 180px;
+    }
+
+    .seecardIndi {
+        position: relative;
+        border-radius: 8px;
+        cursor: pointer;
+        width: 180px;
+    }
+
+    .seecardgrp {
+        position: relative;
+        border-radius: 8px;
+        cursor: pointer;
+        width: 180px;
+    }
 }
