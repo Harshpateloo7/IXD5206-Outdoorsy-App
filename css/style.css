@@ -314,8 +314,8 @@ img.calaries {
     border-radius: 34px;
     height: 2.5em;
     width: 6em;
+    background-color: #6249c5;
     color: #F7F5FF;
-    background-color: #6249C5
     border: 1px solid #6249C5;
 }
 
@@ -323,8 +323,9 @@ img.calaries {
     border-radius: 34px;
     height: 2.5em;
     width: 6em;
-    color: #6249C5;
     border: 1px solid #6249C5;
+    background-color: #fff; 
+    color: #6249C5;
 }
 
 #two {
