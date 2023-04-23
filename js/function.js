@@ -17,7 +17,7 @@ cardone.addEventListener('click', () => {
 
     }
 
-})
+});
 grpactivity.addEventListener('click', () => {
     for (let i = 0; i < group.length; i++) {
         let getVal = group[i].style.display;
@@ -28,4 +28,4 @@ grpactivity.addEventListener('click', () => {
             group[i].style.display = 'none';
         }
     }
-})
+});
