@@ -316,6 +316,7 @@ img.calaries {
     width: 6em;
     background-color: #6249c5;
     color: #F7F5FF;
+    font-weight: bold;
     border: 1px solid #6249C5;
 }
 
@@ -325,6 +326,7 @@ img.calaries {
     width: 6em;
     border: 1px solid #6249C5;
     background-color: #fff; 
+    font-weight: bold;
     color: #6249C5;
 }
 
@@ -333,6 +335,7 @@ img.calaries {
     height: 2.5em;
     width: 6em;
     background-color: #fff;
+    font-weight: bold;
     color: #6249C5;
     border: 1px solid #6249C5;
 }
